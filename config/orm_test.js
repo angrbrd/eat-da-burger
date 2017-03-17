@@ -1,5 +1,7 @@
 // Import the ORM and connection objects
 var orm = require ('./orm.js');
+
+// Import the connection file directly, in order to terminate the connection at the end of the test run
 var connection = require ('./connection.js');
 
 // Select all entries from the database
