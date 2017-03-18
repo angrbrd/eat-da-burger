@@ -8,7 +8,11 @@ var burger = require('../models/burger.js');
 // Create the routes and associated logic
 router.get('/', function(req, res) {
   burger.selectAll(function(data) {
-    res.json(data);
+    var hbsObject = {
+      burgers: data
+    };
+    // console.log(hbsObject);
+    res.render('index', hbsObject);
   });
 });
 
@@ -18,8 +22,7 @@ router.post('/burgers', function(req, res) {
   ], [
     req.body.burger_name
   ], function(data) {
-    // res.redirect('/');
-    res.json(data);
+    res.redirect('/');
   });
 });
 
@@ -29,8 +32,7 @@ router.put('/burgers/:id', function(req, res) {
   burger.updateOne({
     devoured: true
   }, condition, function(data) {
-    // res.redirect('/'');
-    res.json(data);
+    res.redirect('/');
   });
 });
 
