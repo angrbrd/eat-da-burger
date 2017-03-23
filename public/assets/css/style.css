@@ -4,7 +4,7 @@
 
  body {
  	width: 75%;
-	margin: 0px auto; 
+	margin: 0 auto; 
 
 	display: flex;
 	min-height: 100vh;
@@ -73,7 +73,7 @@
 
  	border-radius: 25px;
  	width: 100%;
- 	margin: 0px;
+ 	margin: 0;
  	padding: 10px;
  	background-color: #FFC04C;
  	border: none;
@@ -85,5 +85,5 @@
 
 .burgerFooter {
 	background-color: #FFC04C;
-	padding: 20px 0px;
+	padding: 20px 0;
 }
